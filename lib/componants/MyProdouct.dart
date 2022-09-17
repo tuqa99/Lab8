@@ -44,7 +44,7 @@ Function() ontap;
                             ),
                           ],
                         ),
-                        Row(
+                        Row(mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               '$nameProduct',
@@ -59,7 +59,7 @@ Function() ontap;
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text('$priceProduct'),
-                            const Icon(Icons.favorite),
+                            const Icon(Icons.favorite, color: Colors.redAccent,),
                           ],
                         )
                       ],

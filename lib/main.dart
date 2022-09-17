@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:labeight/Screens/Fridges.dart';
 
 import './componants/MyProdouct.dart';
 
-import 'Screens/test.dart';
+import 'Screens/Screens.dart';
+import './Screens/Fridges.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -31,7 +33,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.yellow[700],
+        backgroundColor: Color.fromARGB(255, 47, 59, 129),
+        title: Text('SAMSUNG'),
       ),
       drawer: Drawer(),
       body: ListView(
@@ -44,12 +47,17 @@ class _HomeState extends State<Home> {
                   Column(
                     children: [
                       Text(
-                        'Welcome ... Store',
-                        style: TextStyle(fontSize: 29),
+                        'Welcome  to Samsung Store',
+                        style: TextStyle(fontSize: 19),
                       ),
-                      Text(
-                        'Hi...',
-                        style: TextStyle(fontSize: 22),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hi...  Ahmmad',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -60,23 +68,30 @@ class _HomeState extends State<Home> {
                     width: 60,
                   ),
                 ],
-              ), SizedBox(
-                    width: 22,
-                    height: 44,
-                  ), Divider(thickness: 6,),
+              ),
+              SizedBox(
+                width: 22,
+                height: 10,
+              ),
+              Divider(
+                thickness: 6,
+              ),
+              SizedBox(
+                height: 22,
+              ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                 
                   Product(
                     imageProduct:
-                        'https://media.istockphoto.com/photos/warehouse-of-large-factory-digital-tablet-picture-id670852562?k=20&m=670852562&s=612x612&w=0&h=o6JQSSFl0bAK5NZOQcfXiC6rh8viTXlE6ul8o8jMIPM=',
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dqRbcTLc4s8YfVfjA6IPXw5eFvXP8zdnkg&usqp=CAU',
                     nameProduct: "Fridges",
-                    priceProduct: "200\$",
+                    priceProduct: "",
                     ontap: () {
                       setState(() {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
-                            return Test();
+                            return Fridgescreen();
                           },
                         ));
                       });
@@ -87,14 +102,14 @@ class _HomeState extends State<Home> {
                   ),
                   Product(
                     imageProduct:
-                        'https://media.istockphoto.com/photos/warehouse-of-large-factory-digital-tablet-picture-id670852562?k=20&m=670852562&s=612x612&w=0&h=o6JQSSFl0bAK5NZOQcfXiC6rh8viTXlE6ul8o8jMIPM=',
+                        'https://media.istockphoto.com/photos/smart-tv-with-samsung-apps-and-web-browser-picture-id458308457?k=20&m=458308457&s=612x612&w=0&h=n4VujYtG6vADLP2xy0wwr7sKdjKlxFBiwtBzyuFD0gU=',
                     nameProduct: "Screens",
-                    priceProduct: "250\$",
+                    priceProduct: "",
                     ontap: () {
                       setState(() {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
-                            return Test();
+                            return Screens();
                           },
                         ));
                       });
@@ -102,19 +117,22 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              SizedBox(height: 44,),
+              SizedBox(
+                height: 44,
+              ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Product(
                     imageProduct:
-                        'https://media.istockphoto.com/photos/high-angle-view-close-up-asian-woman-using-meal-delivery-service-picture-id1324465031?k=20&m=1324465031&s=612x612&w=0&h=kFkty2GbY_kEuTDpOZlhgb7oQLLYeHUGywsQG3VPYks=',
+                        'https://media.istockphoto.com/photos/washing-machine-isolated-on-white-background-picture-id1328117297?k=20&m=1328117297&s=612x612&w=0&h=PUw-SKnCYxG1huGbyhAxV-DLIu4SUcSL2aIuvMhYH5s=',
                     nameProduct: "Washing -M",
-                    priceProduct: "150\$",
+                    priceProduct: "",
                     ontap: () {
                       setState(() {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
-                            return Test();
+                            return Screens();
                           },
                         ));
                       });
@@ -125,32 +143,37 @@ class _HomeState extends State<Home> {
                   ),
                   Product(
                     imageProduct:
-                        'https://media.istockphoto.com/photos/high-angle-view-close-up-asian-woman-using-meal-delivery-service-picture-id1324465031?k=20&m=1324465031&s=612x612&w=0&h=kFkty2GbY_kEuTDpOZlhgb7oQLLYeHUGywsQG3VPYks=',
+                        'https://media.istockphoto.com/photos/huawei-p30-lite-picture-id1169842299?k=20&m=1169842299&s=612x612&w=0&h=npTJR6Xp9ehNrE7U0r0nIl1hxLzoE5TR3_Q3UqnxuwA=',
                     nameProduct: "Phones",
-                    priceProduct: "450\$",
+                    priceProduct: "",
                     ontap: () {
                       setState(() {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
-                            return Test();
+                            return Screens();
                           },
                         ));
                       });
                     },
                   ),
                 ],
-              ), SizedBox(height: 44,),
+              ),
+              SizedBox(
+                height: 44,
+              ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Product(
-                    imageProduct: 'https://media.istockphoto.com/photos/office-desktop-with-womans-hands-working-on-laptop-business-with-picture-id1389860986?k=20&m=1389860986&s=612x612&w=0&h=LpwVns5ozTwvAIbmV-_Bt5TDJ7CmAWdhSZAx8_QKEos=',
+                    imageProduct:
+                        'https://media.istockphoto.com/photos/modern-new-office-black-laptop-on-white-background-front-view-picture-id1362775618?k=20&m=1362775618&s=612x612&w=0&h=5VEU2D2sIo0X62TqW3tecGcIPe7KR9SDHSBdEYkMafo=',
                     nameProduct: "Laptops",
-                    priceProduct: "750\$",
+                    priceProduct: "",
                     ontap: () {
                       setState(() {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
-                            return Test();
+                            return Screens();
                           },
                         ));
                       });
@@ -161,14 +184,14 @@ class _HomeState extends State<Home> {
                   ),
                   Product(
                     imageProduct:
-                        'https://media.istockphoto.com/vectors/modern-laptop-isolated-on-transparent-background-levitation-effect-vector-id1314197242?k=20&m=1314197242&s=612x612&w=0&h=oQk_q_v4VYpkwZTeHBhHdvsbDqRu3Z3gtIlEHYvxyjU=',
+                        'https://media.istockphoto.com/photos/microwave-oven-picture-id1351458571?k=20&m=1351458571&s=612x612&w=0&h=Pm98Hic-VmE_f-AEanil-FhyWXawKjaqGmnt9kQYAN0=',
                     nameProduct: "Microwaves",
-                    priceProduct: "50\$",
+                    priceProduct: "",
                     ontap: () {
                       setState(() {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
-                            return Test();
+                            return Screens();
                           },
                         ));
                       });

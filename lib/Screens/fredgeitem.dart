@@ -1,17 +1,16 @@
 import 'package:labeight/main.dart';
 
-import '../componants/MyProdouct.dart';
 
 import 'package:flutter/material.dart';
 
-class Test extends StatefulWidget {
-  Test({super.key});
+class FridgeOne extends StatefulWidget {
+  FridgeOne({super.key});
 
   @override
-  State<Test> createState() => _TestState();
+  State<FridgeOne> createState() => _FridgeOneState();
 }
 
-class _TestState extends State<Test> {
+class _FridgeOneState extends State<FridgeOne> {
   String balckfrindge = 'https://leaders.jo/wp-content/uploads/2022/07/mj7.jpg';
   Color favaritcolor = Colors.grey;
   int _itemCount = 0;
@@ -84,7 +83,7 @@ class _TestState extends State<Test> {
                                 onPressed: () {
                                   setState(() {
                                     balckfrindge =
-                                        'https://cairosales.com/32478-thickbox_default/smeg-refrigerator-feet-118-liter-one-door-red-colour-fab-10-rr.jpg';
+                                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbo5CopkvRFCDz_NDT8cwI_cgEGAjP0mDK7A&usqp=CAU';
                                   });
                                 },
                                 icon: Icon(
@@ -179,7 +178,7 @@ class _TestState extends State<Test> {
                       return MyApp();
                     },));
                   });
-                }, child: Text('back'))
+                }, child: Text('Home'))
               ],
             ),
           )
