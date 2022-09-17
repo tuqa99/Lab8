@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './componants/MyProdouct.dart';
-import './Screens/phonescreen.dart';
+
 import 'Screens/test.dart';
 
 void main() {
@@ -62,9 +62,11 @@ class _HomeState extends State<Home> {
                 ],
               ), SizedBox(
                     width: 22,
-                  ),
+                    height: 44,
+                  ), Divider(thickness: 6,),
               Row(
                 children: [
+                 
                   Product(
                     imageProduct:
                         'https://media.istockphoto.com/photos/warehouse-of-large-factory-digital-tablet-picture-id670852562?k=20&m=670852562&s=612x612&w=0&h=o6JQSSFl0bAK5NZOQcfXiC6rh8viTXlE6ul8o8jMIPM=',
